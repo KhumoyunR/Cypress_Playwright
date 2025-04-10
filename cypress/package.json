@@ -1,0 +1,26 @@
+{
+
+  "scripts": {
+
+    "unit": "npx cypress run --spec cypress/e2e/unit.cy.js",
+
+    "integration": "npx cypress run --spec cypress/e2e/integration.cy.js",
+
+    "acceptance": "npx cypress run --spec cypress/e2e/acceptance.cy.js",
+
+    "test:parallel": "npm-run-all --parallel unit integration acceptance",
+    
+    "cy:run": "npx cypress run",
+    "cy:parallel" : "cypress-parallel -s cy:run -t 2 -d 'cypress/e2e/*.js'"
+
+  },
+
+  "devDependencies": {
+
+    "cypress-parallel": "^0.15.0",
+
+    "npm-run-all": "^4.1.5"
+
+  }
+
+}

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('integration test of webstore', async ({ page }) => {
+test('checks the interaction of the product page with the cart page', async ({ page }) => {
   await page.goto('https://practicesoftwaretesting.com/');
   await page.locator('data-test=product-name').getByText('Bolt Cutters').click();
   await expect(page.locator('data-test=product-name')).toHaveText('Bolt Cutters');

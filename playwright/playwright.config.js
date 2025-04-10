@@ -34,6 +34,8 @@ export default defineConfig({
     launchOptions: {
       slowMo: 0,
     },
+
+    reporter: [['json', { outputFile: 'results.json' }]],
   },
 
   /* Configure projects for major browsers */
